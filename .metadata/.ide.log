@@ -539,3 +539,7 @@
 2022-12-03 19:01:54,877 [INFO] ProjectBuilder:3789 - Time for Generating toolchain IDE Files: 4701mS.
 2022-12-03 19:01:54,880 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 2mS.
 2022-12-03 19:01:54,890 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
+2022-12-03 21:25:01,125 [INFO] Activator:177 - 
+
+
+2022-12-03 21:25:01,129 [INFO] Activator:178 - !SESSION log4j initialized

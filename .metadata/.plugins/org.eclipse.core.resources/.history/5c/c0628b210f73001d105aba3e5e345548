@@ -20,7 +20,7 @@ void fsm_automatic_run(int x, int y, int z){
 					ped = 0;
 				}
 				HAL_GPIO_WritePin(GPIOB, PED_RED_Pin, 0);
-				PWM = PWM+10;
+				PWM = PWM-10;
 				if(PWM == 950){
 					PWM = 0;
 				}
@@ -45,7 +45,7 @@ void fsm_automatic_run(int x, int y, int z){
 					ped = 0;
 				}
 				HAL_GPIO_WritePin(GPIOB, PED_RED_Pin, 0);
-				PWM = PWM+10;
+				PWM = PWM-10;
 				if(PWM == 950){
 					PWM = 0;
 				}
@@ -70,7 +70,7 @@ void fsm_automatic_run(int x, int y, int z){
 					ped = 0;
 				}
 				HAL_GPIO_WritePin(GPIOB, PED_GREEN_Pin, 0);
-				PWM = PWM+10;
+				PWM = PWM-10;
 				if(PWM == 950){
 					PWM = 0;
 				}

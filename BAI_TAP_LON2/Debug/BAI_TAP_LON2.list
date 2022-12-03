@@ -37,13 +37,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  16 .debug_macro  00016c4c  00000000  00000000  0002c690  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   0000b970  00000000  00000000  000432dc  2**0
+ 17 .debug_line   0000b979  00000000  00000000  000432dc  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    0008218a  00000000  00000000  0004ec4c  2**0
+ 18 .debug_str    0008218a  00000000  00000000  0004ec55  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000053  00000000  00000000  000d0dd6  2**0
+ 19 .comment      00000053  00000000  00000000  000d0ddf  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  0000290c  00000000  00000000  000d0e2c  2**2
+ 20 .debug_frame  0000290c  00000000  00000000  000d0e34  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -568,10 +568,10 @@ void fsm_automatic_run(int x, int y, int z){
  8000486:	2140      	movs	r1, #64	; 0x40
  8000488:	4876      	ldr	r0, [pc, #472]	; (8000664 <fsm_automatic_run+0x254>)
  800048a:	f001 fa9c 	bl	80019c6 <HAL_GPIO_WritePin>
-				PWM++;
+				PWM = PWM+10;
  800048e:	4b78      	ldr	r3, [pc, #480]	; (8000670 <fsm_automatic_run+0x260>)
  8000490:	681b      	ldr	r3, [r3, #0]
- 8000492:	3301      	adds	r3, #1
+ 8000492:	330a      	adds	r3, #10
  8000494:	4a76      	ldr	r2, [pc, #472]	; (8000670 <fsm_automatic_run+0x260>)
  8000496:	6013      	str	r3, [r2, #0]
 				if(PWM == 950){
@@ -656,10 +656,10 @@ void fsm_automatic_run(int x, int y, int z){
  800051a:	2140      	movs	r1, #64	; 0x40
  800051c:	4851      	ldr	r0, [pc, #324]	; (8000664 <fsm_automatic_run+0x254>)
  800051e:	f001 fa52 	bl	80019c6 <HAL_GPIO_WritePin>
-				PWM++;
+				PWM = PWM+10;
  8000522:	4b53      	ldr	r3, [pc, #332]	; (8000670 <fsm_automatic_run+0x260>)
  8000524:	681b      	ldr	r3, [r3, #0]
- 8000526:	3301      	adds	r3, #1
+ 8000526:	330a      	adds	r3, #10
  8000528:	4a51      	ldr	r2, [pc, #324]	; (8000670 <fsm_automatic_run+0x260>)
  800052a:	6013      	str	r3, [r2, #0]
 				if(PWM == 950){
@@ -744,10 +744,10 @@ void fsm_automatic_run(int x, int y, int z){
  80005ac:	f44f 6180 	mov.w	r1, #1024	; 0x400
  80005b0:	482c      	ldr	r0, [pc, #176]	; (8000664 <fsm_automatic_run+0x254>)
  80005b2:	f001 fa08 	bl	80019c6 <HAL_GPIO_WritePin>
-				PWM++;
+				PWM = PWM+10;
  80005b6:	4b2e      	ldr	r3, [pc, #184]	; (8000670 <fsm_automatic_run+0x260>)
  80005b8:	681b      	ldr	r3, [r3, #0]
- 80005ba:	3301      	adds	r3, #1
+ 80005ba:	330a      	adds	r3, #10
  80005bc:	4a2c      	ldr	r2, [pc, #176]	; (8000670 <fsm_automatic_run+0x260>)
  80005be:	6013      	str	r3, [r2, #0]
 				if(PWM == 950){

@@ -1,24 +1,23 @@
-20:00:04 **** Incremental Build of configuration Debug for project BAI_TAP_LON2 ****
+20:33:54 **** Incremental Build of configuration Debug for project BAI_TAP_LON2 ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/fsm_automatic.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm_automatic.d" -MT"Core/Src/fsm_automatic.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm_automatic.o"
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 arm-none-eabi-gcc -o "BAI_TAP_LON2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Hong Phat\Desktop\BTL_VLX\BAI_TAP_LON2\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BAI_TAP_LON2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: BAI_TAP_LON2.elf
  
 arm-none-eabi-size   BAI_TAP_LON2.elf 
 arm-none-eabi-objdump -h -S  BAI_TAP_LON2.elf  > "BAI_TAP_LON2.list"
 arm-none-eabi-objcopy  -O ihex  BAI_TAP_LON2.elf  "BAI_TAP_LON2.hex"
+arm-none-eabi-objcopy  -O binary  BAI_TAP_LON2.elf  "BAI_TAP_LON2.bin"
    text	   data	    bss	    dec	    hex	filename
   12508	     92	   2596	  15196	   3b5c	BAI_TAP_LON2.elf
-arm-none-eabi-objcopy  -O binary  BAI_TAP_LON2.elf  "BAI_TAP_LON2.bin"
 Finished building: default.size.stdout
  
-Finished building: BAI_TAP_LON2.hex
 Finished building: BAI_TAP_LON2.bin
+Finished building: BAI_TAP_LON2.hex
  
  
 Finished building: BAI_TAP_LON2.list
  
 
-20:00:06 Build Finished. 0 errors, 0 warnings. (took 1s.273ms)
+20:33:55 Build Finished. 0 errors, 0 warnings. (took 1s.205ms)
 
