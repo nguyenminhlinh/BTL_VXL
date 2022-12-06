@@ -21,3 +21,4 @@ int count = 0;
 int mode = 1;
 int ped = 0;
 uint32_t PWM = 0;
+char data[9] = "";

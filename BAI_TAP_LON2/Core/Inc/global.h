@@ -11,7 +11,7 @@
 
 #include"timer.h"
 #include"main.h"
-
+#include "stdio.h"
 #define INIT		1
 #define AUTO_RED	2
 #define AUTO_GREEN	3
@@ -32,4 +32,6 @@ extern int counter_red;
 extern int counter_yellow;
 extern int counter_green;
 extern uint32_t PWM ;
+
+extern char  data[];
 #endif /* INC_GLOBAL_H_ */

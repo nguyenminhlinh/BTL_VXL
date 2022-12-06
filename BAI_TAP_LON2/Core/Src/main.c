@@ -121,11 +121,17 @@ int main(void)
 
   /* USER CODE END 2 */
 
+  /* USER CODE BEGIN 2 */
+
+  /* USER CODE END 2 */
+
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
     /* USER CODE END WHILE */
+	  HAL_UART_Transmit_IT(&huart2,(void*)data,9);
+
 	  	SCH_Dispatch_Tasks();
 	  	__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1,PWM);
 
@@ -308,6 +314,7 @@ static void MX_GPIO_Init(void)
   GPIO_InitTypeDef GPIO_InitStruct = {0};
 
   /* GPIO Ports Clock Enable */
+  __HAL_RCC_GPIOD_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
@@ -350,6 +357,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 	timer_run();
 	timer_run2();
 	timer_run3();
+	timer_run4();
 	SCH_Update() ;
 }
 /* USER CODE END 4 */

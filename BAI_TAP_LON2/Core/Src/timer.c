@@ -59,8 +59,8 @@ void timer_run3(){
 	}
 }
 void timer_run4(){
-	if(timer3_counter >= 0){
-		timer3_counter--;
-		if(timer3_counter == 0) timer3_flag = 1;
+	if(timer4_counter >= 0){
+		timer4_counter--;
+		if(timer4_counter == 0) timer4_flag = 1;
 	}
 }

@@ -6,15 +6,25 @@
  */
 #include "fsm_automatic.h"
 #include "main.h"
+
 void fsm_automatic_run(int x, int y, int z){
 	switch(status){
 		case INIT:
 		    	status = AUTO_GREEN;
 				HAL_GPIO_WritePin(GPIOA, TrafficLight1_0_Pin, 0);
 				HAL_GPIO_WritePin(GPIOB, TrafficLight1_1_Pin, 1);
+				counter_red = global_red;
+				counter_green = global_green;
+				counter_yellow = global_yellow;
+				setTimer4(1000);
 				setTimer1(y*1000);
 			break;
 		case AUTO_GREEN:
+			if(timer4_flag == 1){
+				setTimer4(1000);
+				counter_green--;
+				sprintf(data,"!7SEG:%d%d#",counter_green/10,counter_green%10);
+			}
 			if(ped == 1){
 				if(timer2_flag == 1){
 					ped = 0;
@@ -35,6 +45,8 @@ void fsm_automatic_run(int x, int y, int z){
 				HAL_GPIO_WritePin(GPIOB, TrafficLight1_1_Pin, 1);
 				HAL_GPIO_WritePin(GPIOA, LED_PED_1_Pin, 0);
 				HAL_GPIO_WritePin(GPIOB, LED_PED_2_Pin, 0);
+				counter_red = global_red;
+
 				setTimer1(z*1000);
 			}
 
