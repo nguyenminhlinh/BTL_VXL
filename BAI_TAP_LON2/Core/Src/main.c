@@ -22,7 +22,12 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "button.h"
+#include "fsm_automatic.h"
+#include "timer.h"
+#include "global.h"
+#include "control.h"
+#include "scheduler.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -96,6 +101,22 @@ int main(void)
   MX_USART2_UART_Init();
   MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
+  HAL_TIM_Base_Start_IT (&htim2 );
+	status = INIT;
+	status1 = INIT;
+//	uint32_t PWM = 0;
+	global_green = 3;
+	global_red = 5;
+	global_yellow = 2;
+	SCH_Init();
+	HAL_TIM_PWM_Start (&htim3, TIM_CHANNEL_1);
+	SCH_Add_Task(control_unit, 0, 1);   // controll all the button and state machine
+	SCH_Add_Task(getKeyInput1, 0, 1);    /* USER CODE BEGIN 3 */
+	SCH_Add_Task(getKeyInput2, 0, 1);    /* USER CODE BEGIN 3 */
+	SCH_Add_Task(getKeyInput3, 0, 1);    /* USER CODE BEGIN 3 */
+	SCH_Add_Task(getKeyInput4, 0, 1);    /* USER CODE BEGIN 3 */
+	setTimer2(10);
+  /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
 
@@ -104,6 +125,8 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
+	  	SCH_Dispatch_Tasks();
+	  	__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1,PWM);
 
     /* USER CODE BEGIN 3 */
   }
@@ -296,13 +319,13 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pins : BUTTON_4_Pin BUTTON_1_Pin BUTTON_2_Pin */
   GPIO_InitStruct.Pin = BUTTON_4_Pin|BUTTON_1_Pin|BUTTON_2_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /*Configure GPIO pin : BUTTON_3_Pin */
   GPIO_InitStruct.Pin = BUTTON_3_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(BUTTON_3_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pins : LED_PED_2_Pin TrafficLight1_1_Pin TrafficLight2_1_Pin TrafficLight2_0_Pin */
@@ -322,7 +345,12 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
+	timer_run();
+	timer_run2();
+	timer_run3();
+	SCH_Update() ;
+}
 /* USER CODE END 4 */
 
 /**

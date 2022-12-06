@@ -40,7 +40,7 @@ void control_unit(){
 	if(button_flag4 == 1)
 	{
 		ped = 1;
-		setTimer3(global_green+global_red+global_yellow);
+		setTimer2(global_green+global_red+global_yellow);
 		button_flag4 = 0;
 	}
 
