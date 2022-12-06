@@ -510,3 +510,41 @@
 2022-12-06 08:31:30,267 [INFO] McuFinderGlobals:52 - Set McuFinderConnectedMode to true
 2022-12-06 08:31:31,178 [INFO] ApiDb:276 - Save user favorites file C:\Users\Hong Phat/.stm32cubeide/favorites.mcus.txt: 0 item(s)
 2022-12-06 08:31:31,179 [INFO] ApiDb:280 - User favorites MCUs=[]
+2022-12-06 08:48:39,221 [INFO] Gpio:254 - dependency for GPIO [SYS, TIM3, USART2]
+2022-12-06 08:49:12,316 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 700787432 Bytes (927989760)
+2022-12-06 08:49:14,261 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 740854336 Bytes (927989760)
+2022-12-06 08:49:17,650 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 771873848 Bytes (927989760)
+2022-12-06 08:49:18,299 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: NVIC
+2022-12-06 08:49:18,299 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: USART
+2022-12-06 08:49:18,299 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2022-12-06 08:49:18,299 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2022-12-06 08:49:18,299 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: SYS
+2022-12-06 08:49:18,304 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: GPIO
+2022-12-06 08:49:18,304 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: RCC
+2022-12-06 08:49:18,309 [INFO] CodeGenerator:663 - code generatio: config db path: C:\ST\STM32CubeIDE_1.7.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.3.0.202107141111\\db\
+2022-12-06 08:49:19,098 [INFO] CodeEngine:239 - oldGeneratedFile, C:\Users\Hong Phat\Desktop\vlx btl\BAI_TAP_LON2\MXTmpFiles\license.tmp_save
+2022-12-06 08:49:19,226 [INFO] CodeEngine:257 - Generated code: C:\Users\Hong Phat\Desktop\vlx btl\BAI_TAP_LON2\MXTmpFiles\license.tmp
+2022-12-06 08:49:19,433 [INFO] CodeEngine:239 - oldGeneratedFile, C:\Users\Hong Phat\Desktop\vlx btl\BAI_TAP_LON2\MXTmpFiles\gpio.tmp_save
+2022-12-06 08:49:19,753 [INFO] CodeEngine:257 - Generated code: C:\Users\Hong Phat\Desktop\vlx btl\BAI_TAP_LON2\MXTmpFiles\gpio.tmp
+2022-12-06 08:49:20,321 [INFO] CodeEngine:239 - oldGeneratedFile, C:\Users\Hong Phat\Desktop\vlx btl\BAI_TAP_LON2\Core\Src\stm32f1xx_it.c_save
+2022-12-06 08:49:20,507 [INFO] CodeEngine:257 - Generated code: C:\Users\Hong Phat\Desktop\vlx btl\BAI_TAP_LON2\Core\Src\stm32f1xx_it.c
+2022-12-06 08:49:20,521 [INFO] CodeEngine:239 - oldGeneratedFile, C:\Users\Hong Phat\Desktop\vlx btl\BAI_TAP_LON2\Core\Inc\stm32f1xx_it.h_save
+2022-12-06 08:49:20,707 [INFO] CodeEngine:257 - Generated code: C:\Users\Hong Phat\Desktop\vlx btl\BAI_TAP_LON2\Core\Inc\stm32f1xx_it.h
+2022-12-06 08:49:20,780 [INFO] CodeEngine:239 - oldGeneratedFile, C:\Users\Hong Phat\Desktop\vlx btl\BAI_TAP_LON2\Core\Src\stm32f1xx_hal_msp.c_save
+2022-12-06 08:49:21,121 [INFO] CodeEngine:257 - Generated code: C:\Users\Hong Phat\Desktop\vlx btl\BAI_TAP_LON2\Core\Src\stm32f1xx_hal_msp.c
+2022-12-06 08:49:21,141 [INFO] CodeEngine:239 - oldGeneratedFile, C:\Users\Hong Phat\Desktop\vlx btl\BAI_TAP_LON2\MXTmpFiles\system.tmp_save
+2022-12-06 08:49:21,336 [INFO] CodeEngine:257 - Generated code: C:\Users\Hong Phat\Desktop\vlx btl\BAI_TAP_LON2\MXTmpFiles\system.tmp
+2022-12-06 08:49:21,384 [INFO] CodeEngine:239 - oldGeneratedFile, C:\Users\Hong Phat\Desktop\vlx btl\BAI_TAP_LON2\Core\Inc\stm32f1xx_hal_conf.h_save
+2022-12-06 08:49:21,632 [INFO] CodeEngine:257 - Generated code: C:\Users\Hong Phat\Desktop\vlx btl\BAI_TAP_LON2\Core\Inc\stm32f1xx_hal_conf.h
+2022-12-06 08:49:21,708 [WARN] IPConfigManager:3148 - IP not found : TIM
+2022-12-06 08:49:21,708 [WARN] CodeGenerator:3268 - IP not found : null
+2022-12-06 08:49:21,750 [INFO] CodeEngine:239 - oldGeneratedFile, C:\Users\Hong Phat\Desktop\vlx btl\BAI_TAP_LON2\Core\Inc\main.h_save
+2022-12-06 08:49:21,926 [INFO] CodeEngine:257 - Generated code: C:\Users\Hong Phat\Desktop\vlx btl\BAI_TAP_LON2\Core\Inc\main.h
+2022-12-06 08:49:21,965 [INFO] CodeEngine:239 - oldGeneratedFile, C:\Users\Hong Phat\Desktop\vlx btl\BAI_TAP_LON2\Core\Src\main.c_save
+2022-12-06 08:49:22,315 [INFO] CodeEngine:257 - Generated code: C:\Users\Hong Phat\Desktop\vlx btl\BAI_TAP_LON2\Core\Src\main.c
+2022-12-06 08:49:24,923 [INFO] ProjectBuilder:2578 - Time for Copy HAL[1] : 733mS.
+2022-12-06 08:49:24,924 [INFO] ProjectBuilder:3622 - Project Generator version: 3.14.1
+2022-12-06 08:49:25,859 [INFO] ConfigFileManager:1271 - The Die is : DIE410
+2022-12-06 08:49:29,781 [INFO] ProjectBuilder:3789 - Time for Generating toolchain IDE Files: 4857mS.
+2022-12-06 08:49:29,785 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 4mS.
+2022-12-06 08:49:29,793 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
