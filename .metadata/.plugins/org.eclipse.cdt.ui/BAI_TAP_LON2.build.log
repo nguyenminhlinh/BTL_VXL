@@ -1,6 +1,11 @@
-09:24:06 **** Incremental Build of configuration Debug for project BAI_TAP_LON2 ****
+11:18:23 **** Incremental Build of configuration Debug for project BAI_TAP_LON2 ****
 make -j8 all 
+arm-none-eabi-gcc "../Core/Src/button.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/button.d" -MT"Core/Src/button.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/button.o"
 arm-none-eabi-gcc "../Core/Src/control.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/control.d" -MT"Core/Src/control.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/control.o"
+arm-none-eabi-gcc "../Core/Src/fsm_automatic.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm_automatic.d" -MT"Core/Src/fsm_automatic.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm_automatic.o"
+arm-none-eabi-gcc "../Core/Src/global.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/global.d" -MT"Core/Src/global.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/global.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/timer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/timer.d" -MT"Core/Src/timer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/timer.o"
 arm-none-eabi-gcc -o "BAI_TAP_LON2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Hong Phat\Desktop\vlx btl\BAI_TAP_LON2\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BAI_TAP_LON2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: BAI_TAP_LON2.elf
  
@@ -9,15 +14,15 @@ arm-none-eabi-objdump -h -S  BAI_TAP_LON2.elf  > "BAI_TAP_LON2.list"
 arm-none-eabi-objcopy  -O ihex  BAI_TAP_LON2.elf  "BAI_TAP_LON2.hex"
 arm-none-eabi-objcopy  -O binary  BAI_TAP_LON2.elf  "BAI_TAP_LON2.bin"
    text	   data	    bss	    dec	    hex	filename
-  15336	     92	   2668	  18096	   46b0	BAI_TAP_LON2.elf
+  15304	     92	   2676	  18072	   4698	BAI_TAP_LON2.elf
 Finished building: default.size.stdout
  
-Finished building: BAI_TAP_LON2.bin
 Finished building: BAI_TAP_LON2.hex
+Finished building: BAI_TAP_LON2.bin
  
  
 Finished building: BAI_TAP_LON2.list
  
 
-09:24:09 Build Finished. 0 errors, 0 warnings. (took 2s.341ms)
+11:18:26 Build Finished. 0 errors, 0 warnings. (took 2s.960ms)
 

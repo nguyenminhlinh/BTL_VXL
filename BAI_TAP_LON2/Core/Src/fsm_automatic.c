@@ -9,7 +9,7 @@
 void fsm_automatic_run(int x, int y, int z){
 	switch(status){
 		case INIT:
-		    status = AUTO_GREEN;
+		    	status = AUTO_GREEN;
 				HAL_GPIO_WritePin(GPIOA, TrafficLight1_0_Pin, 0);
 				HAL_GPIO_WritePin(GPIOB, TrafficLight1_1_Pin, 1);
 				setTimer1(y*1000);
@@ -21,10 +21,12 @@ void fsm_automatic_run(int x, int y, int z){
 				}
 				HAL_GPIO_WritePin(GPIOA, LED_PED_1_Pin, 1);
 				HAL_GPIO_WritePin(GPIOB, LED_PED_2_Pin, 0);
-				PWM = PWM+10;
-				if(PWM == 950){
-					PWM = 0;
-				}
+//				if(counter_green <= 2){
+//					PWM = PWM+1;
+//					if(PWM == 950){
+//						PWM = 0;
+//					}
+//				}
 			}
 			if(timer1_flag == 1){
 				PWM = 0;
@@ -44,10 +46,10 @@ void fsm_automatic_run(int x, int y, int z){
 				}
 				HAL_GPIO_WritePin(GPIOA, LED_PED_1_Pin, 1);
 				HAL_GPIO_WritePin(GPIOB, LED_PED_2_Pin, 0);
-				PWM = PWM+10;
-				if(PWM == 950){
-					PWM = 0;
-				}
+//				PWM = PWM+1;
+//				if(PWM == 950){
+//					PWM = 0;
+//				}
 			}
 			if(timer1_flag == 1){
 				PWM = 0 ;
@@ -67,11 +69,13 @@ void fsm_automatic_run(int x, int y, int z){
 				}
 				HAL_GPIO_WritePin(GPIOA, LED_PED_1_Pin, 0);
 				HAL_GPIO_WritePin(GPIOB, LED_PED_2_Pin, 1);
-				PWM = PWM+10;
-				if(PWM == 950){
-					PWM = 0;
+				//if(counter_red <= 2){
+					PWM = PWM+4;
+					if(PWM == 950){
+						PWM = 0;
+					}
 				}
-			}
+			//}
 			if(timer1_flag == 1){
 				PWM = 0;
 				status = AUTO_GREEN;
@@ -81,13 +85,7 @@ void fsm_automatic_run(int x, int y, int z){
 				HAL_GPIO_WritePin(GPIOB, TrafficLight1_1_Pin, 1);
 				setTimer1(y*1000);
 			}
-			if(ped == 1){
-				if(timer3_flag == 1){
-					ped = 0;
-				}
-				HAL_GPIO_WritePin(GPIOA, LED_PED_1_Pin, 0);
-				HAL_GPIO_WritePin(GPIOB, LED_PED_2_Pin, 1);
-			}
+
 			break;
 		default:
 			break;

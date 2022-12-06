@@ -115,7 +115,8 @@ int main(void)
 	SCH_Add_Task(getKeyInput2, 0, 1);    /* USER CODE BEGIN 3 */
 	SCH_Add_Task(getKeyInput3, 0, 1);    /* USER CODE BEGIN 3 */
 	SCH_Add_Task(getKeyInput4, 0, 1);    /* USER CODE BEGIN 3 */
-	setTimer2(10);
+//	setTimer2(10);
+	setTimer4(10);
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
