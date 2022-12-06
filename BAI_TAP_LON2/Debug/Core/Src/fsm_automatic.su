@@ -1,4 +1,4 @@
 fsm_automatic.c:10:6:fsm_automatic_run	24	static
-fsm_automatic.c:106:6:fsm_automatic_run2	24	static
-fsm_automatic.c:144:6:fsm_automatic_run3	8	static
-fsm_automatic.c:180:6:fsm_automatic_run4	8	static
+fsm_automatic.c:119:6:fsm_automatic_run2	24	static
+fsm_automatic.c:157:6:fsm_automatic_run3	8	static
+fsm_automatic.c:193:6:fsm_automatic_run4	8	static

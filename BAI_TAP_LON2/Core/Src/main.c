@@ -130,7 +130,9 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	  HAL_UART_Transmit_IT(&huart2,(void*)data,9);
+	  if(timer4_flag == 1){
+		  HAL_UART_Transmit_IT(&huart2,(void*)data,12);
+	  }
 
 	  	SCH_Dispatch_Tasks();
 	  	__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1,PWM);

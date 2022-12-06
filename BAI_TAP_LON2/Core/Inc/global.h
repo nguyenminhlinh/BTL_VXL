@@ -28,9 +28,8 @@ extern int ped ;
 extern int global_green;
 extern int global_red;
 extern int global_yellow;
-extern int counter_red;
-extern int counter_yellow;
-extern int counter_green;
+extern int countdown;
+
 extern uint32_t PWM ;
 
 extern char  data[];

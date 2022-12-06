@@ -1,3 +1,4 @@
+
 /*
  * fsm_automatic.c
  *
@@ -6,31 +7,29 @@
  */
 #include "fsm_automatic.h"
 #include "main.h"
-
 void fsm_automatic_run(int x, int y, int z){
 	switch(status){
 		case INIT:
 		    	status = AUTO_GREEN;
 				HAL_GPIO_WritePin(GPIOA, TrafficLight1_0_Pin, 0);
 				HAL_GPIO_WritePin(GPIOB, TrafficLight1_1_Pin, 1);
-				counter_red = global_red;
-				counter_green = global_green;
-				counter_yellow = global_yellow;
+				countdown = global_green;
 				setTimer4(1000);
 				setTimer1(y*1000);
 			break;
 		case AUTO_GREEN:
 			if(timer4_flag == 1){
 				setTimer4(1000);
-				counter_green--;
-				sprintf(data,"!7SEG:%d%d#",counter_green/10,counter_green%10);
+				sprintf(data,"!7SEG:%d%d#\n",countdown/10,countdown%10);
+				countdown--;
 			}
 			if(ped == 1){
 				if(timer2_flag == 1){
 					ped = 0;
 				}
-				HAL_GPIO_WritePin(GPIOA, LED_PED_1_Pin, 1);
-				HAL_GPIO_WritePin(GPIOB, LED_PED_2_Pin, 0);
+				HAL_GPIO_WritePin(GPIOA, LED_PED_1_Pin, 0);
+				HAL_GPIO_WritePin(GPIOB, LED_PED_2_Pin, 1);
+				PWM = 0;
 //				if(counter_green <= 2){
 //					PWM = PWM+1;
 //					if(PWM == 950){
@@ -45,19 +44,25 @@ void fsm_automatic_run(int x, int y, int z){
 				HAL_GPIO_WritePin(GPIOB, TrafficLight1_1_Pin, 1);
 				HAL_GPIO_WritePin(GPIOA, LED_PED_1_Pin, 0);
 				HAL_GPIO_WritePin(GPIOB, LED_PED_2_Pin, 0);
-				counter_red = global_red;
-
 				setTimer1(z*1000);
+				countdown=global_yellow;
 			}
 
 			break;
 		case AUTO_YELLOW:
+			if(timer4_flag == 1){
+				setTimer4(1000);
+
+				sprintf(data,"!7SEG:%d%d#\n",countdown/10,countdown%10);
+				countdown--;
+			}
 			if(ped == 1){
 				if(timer2_flag == 1){
 					ped = 0;
 				}
-				HAL_GPIO_WritePin(GPIOA, LED_PED_1_Pin, 1);
-				HAL_GPIO_WritePin(GPIOB, LED_PED_2_Pin, 0);
+				HAL_GPIO_WritePin(GPIOA, LED_PED_1_Pin, 0);
+				HAL_GPIO_WritePin(GPIOB, LED_PED_2_Pin, 1);
+				PWM = 0;
 //				PWM = PWM+1;
 //				if(PWM == 950){
 //					PWM = 0;
@@ -71,23 +76,30 @@ void fsm_automatic_run(int x, int y, int z){
 				HAL_GPIO_WritePin(GPIOA, TrafficLight1_0_Pin, 1);
 				HAL_GPIO_WritePin(GPIOB, TrafficLight1_1_Pin, 0);
 				setTimer1(x*1000);
+				countdown=global_red;
 			}
 
 			break;
 		case AUTO_RED:
+			if(timer4_flag == 1){
+				setTimer4(1000);
+				sprintf(data,"!7SEG:%d%d#\n",countdown/10,countdown%10);
+//				printf('\n');
+				countdown--;
+			}
 			if(ped == 1){
 				if(timer2_flag == 1){
 					ped = 0;
 				}
-				HAL_GPIO_WritePin(GPIOA, LED_PED_1_Pin, 0);
-				HAL_GPIO_WritePin(GPIOB, LED_PED_2_Pin, 1);
-				//if(counter_red <= 2){
-					PWM = PWM+4;
+				HAL_GPIO_WritePin(GPIOA, LED_PED_1_Pin, 1);
+				HAL_GPIO_WritePin(GPIOB, LED_PED_2_Pin, 0);
+				if(countdown <= 3){
+					PWM = PWM+5;
 					if(PWM == 950){
 						PWM = 0;
 					}
 				}
-			//}
+			}
 			if(timer1_flag == 1){
 				PWM = 0;
 				status = AUTO_GREEN;
@@ -96,6 +108,7 @@ void fsm_automatic_run(int x, int y, int z){
 				HAL_GPIO_WritePin(GPIOA, TrafficLight1_0_Pin, 0);
 				HAL_GPIO_WritePin(GPIOB, TrafficLight1_1_Pin, 1);
 				setTimer1(y*1000);
+				countdown=global_green;
 			}
 
 			break;
@@ -237,4 +250,3 @@ void fsm_automatic_run4()
 				button_flag3 = 0;
 			}
 }
-

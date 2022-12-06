@@ -1,4 +1,4 @@
-11:55:13 **** Incremental Build of configuration Debug for project BAI_TAP_LON2 ****
+14:38:10 **** Incremental Build of configuration Debug for project BAI_TAP_LON2 ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/fsm_automatic.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm_automatic.d" -MT"Core/Src/fsm_automatic.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm_automatic.o"
 arm-none-eabi-gcc -o "BAI_TAP_LON2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Hong Phat\Desktop\vlx btl\BAI_TAP_LON2\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BAI_TAP_LON2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
@@ -8,7 +8,7 @@ arm-none-eabi-size   BAI_TAP_LON2.elf
 arm-none-eabi-objdump -h -S  BAI_TAP_LON2.elf  > "BAI_TAP_LON2.list"
 arm-none-eabi-objcopy  -O ihex  BAI_TAP_LON2.elf  "BAI_TAP_LON2.hex"
    text	   data	    bss	    dec	    hex	filename
-  18040	    192	   2728	  20960	   51e0	BAI_TAP_LON2.elf
+  18268	    192	   2720	  21180	   52bc	BAI_TAP_LON2.elf
 arm-none-eabi-objcopy  -O binary  BAI_TAP_LON2.elf  "BAI_TAP_LON2.bin"
 Finished building: default.size.stdout
  
@@ -18,14 +18,28 @@ Finished building: BAI_TAP_LON2.bin
  
 Finished building: BAI_TAP_LON2.list
  
-11:57:34 **** Incremental Build of configuration Debug for project BAI_TAP_LON2 ****
+14:40:35 **** Incremental Build of configuration Debug for project BAI_TAP_LON2 ****
 make -j8 all 
+arm-none-eabi-gcc "../Core/Src/fsm_automatic.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm_automatic.d" -MT"Core/Src/fsm_automatic.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm_automatic.o"
+arm-none-eabi-gcc "../Core/Src/global.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/global.d" -MT"Core/Src/global.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/global.o"
+arm-none-eabi-gcc -o "BAI_TAP_LON2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Hong Phat\Desktop\vlx btl\BAI_TAP_LON2\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BAI_TAP_LON2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BAI_TAP_LON2.elf
+ 
 arm-none-eabi-size   BAI_TAP_LON2.elf 
+arm-none-eabi-objdump -h -S  BAI_TAP_LON2.elf  > "BAI_TAP_LON2.list"
+arm-none-eabi-objcopy  -O ihex  BAI_TAP_LON2.elf  "BAI_TAP_LON2.hex"
+arm-none-eabi-objcopy  -O binary  BAI_TAP_LON2.elf  "BAI_TAP_LON2.bin"
    text	   data	    bss	    dec	    hex	filename
-  18040	    192	   2728	  20960	   51e0	BAI_TAP_LON2.elf
+  18272	    192	   2720	  21184	   52c0	BAI_TAP_LON2.elf
 Finished building: default.size.stdout
  
-12:00:43 **** Incremental Build of configuration Debug for project BAI_TAP_LON2 ****
+Finished building: BAI_TAP_LON2.bin
+Finished building: BAI_TAP_LON2.hex
+ 
+ 
+Finished building: BAI_TAP_LON2.list
+ 
+14:42:35 **** Incremental Build of configuration Debug for project BAI_TAP_LON2 ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/fsm_automatic.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm_automatic.d" -MT"Core/Src/fsm_automatic.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm_automatic.o"
 arm-none-eabi-gcc -o "BAI_TAP_LON2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Hong Phat\Desktop\vlx btl\BAI_TAP_LON2\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BAI_TAP_LON2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
@@ -36,7 +50,27 @@ arm-none-eabi-objdump -h -S  BAI_TAP_LON2.elf  > "BAI_TAP_LON2.list"
 arm-none-eabi-objcopy  -O ihex  BAI_TAP_LON2.elf  "BAI_TAP_LON2.hex"
 arm-none-eabi-objcopy  -O binary  BAI_TAP_LON2.elf  "BAI_TAP_LON2.bin"
    text	   data	    bss	    dec	    hex	filename
-  18048	    192	   2728	  20968	   51e8	BAI_TAP_LON2.elf
+  18272	    192	   2720	  21184	   52c0	BAI_TAP_LON2.elf
+Finished building: default.size.stdout
+ 
+Finished building: BAI_TAP_LON2.hex
+Finished building: BAI_TAP_LON2.bin
+ 
+ 
+Finished building: BAI_TAP_LON2.list
+ 
+14:51:30 **** Incremental Build of configuration Debug for project BAI_TAP_LON2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/fsm_automatic.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm_automatic.d" -MT"Core/Src/fsm_automatic.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm_automatic.o"
+arm-none-eabi-gcc -o "BAI_TAP_LON2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Hong Phat\Desktop\vlx btl\BAI_TAP_LON2\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BAI_TAP_LON2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BAI_TAP_LON2.elf
+ 
+arm-none-eabi-size   BAI_TAP_LON2.elf 
+arm-none-eabi-objdump -h -S  BAI_TAP_LON2.elf  > "BAI_TAP_LON2.list"
+arm-none-eabi-objcopy  -O ihex  BAI_TAP_LON2.elf  "BAI_TAP_LON2.hex"
+arm-none-eabi-objcopy  -O binary  BAI_TAP_LON2.elf  "BAI_TAP_LON2.bin"
+   text	   data	    bss	    dec	    hex	filename
+  18284	    192	   2720	  21196	   52cc	BAI_TAP_LON2.elf
 Finished building: default.size.stdout
  
 Finished building: BAI_TAP_LON2.bin
@@ -44,4 +78,173 @@ Finished building: BAI_TAP_LON2.hex
  
  
 Finished building: BAI_TAP_LON2.list
+ 
+14:52:24 **** Incremental Build of configuration Debug for project BAI_TAP_LON2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/fsm_automatic.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm_automatic.d" -MT"Core/Src/fsm_automatic.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm_automatic.o"
+arm-none-eabi-gcc -o "BAI_TAP_LON2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Hong Phat\Desktop\vlx btl\BAI_TAP_LON2\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BAI_TAP_LON2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BAI_TAP_LON2.elf
+ 
+arm-none-eabi-size   BAI_TAP_LON2.elf 
+arm-none-eabi-objdump -h -S  BAI_TAP_LON2.elf  > "BAI_TAP_LON2.list"
+arm-none-eabi-objcopy  -O ihex  BAI_TAP_LON2.elf  "BAI_TAP_LON2.hex"
+arm-none-eabi-objcopy  -O binary  BAI_TAP_LON2.elf  "BAI_TAP_LON2.bin"
+   text	   data	    bss	    dec	    hex	filename
+  18284	    192	   2720	  21196	   52cc	BAI_TAP_LON2.elf
+Finished building: default.size.stdout
+ 
+Finished building: BAI_TAP_LON2.hex
+Finished building: BAI_TAP_LON2.bin
+ 
+ 
+Finished building: BAI_TAP_LON2.list
+ 
+14:55:12 **** Incremental Build of configuration Debug for project BAI_TAP_LON2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/fsm_automatic.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm_automatic.d" -MT"Core/Src/fsm_automatic.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm_automatic.o"
+arm-none-eabi-gcc -o "BAI_TAP_LON2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Hong Phat\Desktop\vlx btl\BAI_TAP_LON2\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BAI_TAP_LON2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BAI_TAP_LON2.elf
+ 
+arm-none-eabi-size   BAI_TAP_LON2.elf 
+arm-none-eabi-objdump -h -S  BAI_TAP_LON2.elf  > "BAI_TAP_LON2.list"
+arm-none-eabi-objcopy  -O ihex  BAI_TAP_LON2.elf  "BAI_TAP_LON2.hex"
+arm-none-eabi-objcopy  -O binary  BAI_TAP_LON2.elf  "BAI_TAP_LON2.bin"
+   text	   data	    bss	    dec	    hex	filename
+  18284	    192	   2720	  21196	   52cc	BAI_TAP_LON2.elf
+Finished building: default.size.stdout
+ 
+Finished building: BAI_TAP_LON2.hex
+Finished building: BAI_TAP_LON2.bin
+ 
+ 
+Finished building: BAI_TAP_LON2.list
+ 
+14:59:02 **** Incremental Build of configuration Debug for project BAI_TAP_LON2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/fsm_automatic.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm_automatic.d" -MT"Core/Src/fsm_automatic.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm_automatic.o"
+arm-none-eabi-gcc -o "BAI_TAP_LON2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Hong Phat\Desktop\vlx btl\BAI_TAP_LON2\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BAI_TAP_LON2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BAI_TAP_LON2.elf
+ 
+arm-none-eabi-size   BAI_TAP_LON2.elf 
+arm-none-eabi-objdump -h -S  BAI_TAP_LON2.elf  > "BAI_TAP_LON2.list"
+arm-none-eabi-objcopy  -O ihex  BAI_TAP_LON2.elf  "BAI_TAP_LON2.hex"
+arm-none-eabi-objcopy  -O binary  BAI_TAP_LON2.elf  "BAI_TAP_LON2.bin"
+   text	   data	    bss	    dec	    hex	filename
+  18284	    192	   2720	  21196	   52cc	BAI_TAP_LON2.elf
+Finished building: default.size.stdout
+ 
+Finished building: BAI_TAP_LON2.hex
+Finished building: BAI_TAP_LON2.bin
+ 
+ 
+Finished building: BAI_TAP_LON2.list
+ 
+15:00:30 **** Incremental Build of configuration Debug for project BAI_TAP_LON2 ****
+make -j8 all 
+arm-none-eabi-size   BAI_TAP_LON2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18284	    192	   2720	  21196	   52cc	BAI_TAP_LON2.elf
+Finished building: default.size.stdout
+ 
+15:01:51 **** Incremental Build of configuration Debug for project BAI_TAP_LON2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/fsm_automatic.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm_automatic.d" -MT"Core/Src/fsm_automatic.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm_automatic.o"
+arm-none-eabi-gcc -o "BAI_TAP_LON2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Hong Phat\Desktop\vlx btl\BAI_TAP_LON2\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BAI_TAP_LON2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BAI_TAP_LON2.elf
+ 
+arm-none-eabi-size   BAI_TAP_LON2.elf 
+arm-none-eabi-objdump -h -S  BAI_TAP_LON2.elf  > "BAI_TAP_LON2.list"
+arm-none-eabi-objcopy  -O ihex  BAI_TAP_LON2.elf  "BAI_TAP_LON2.hex"
+arm-none-eabi-objcopy  -O binary  BAI_TAP_LON2.elf  "BAI_TAP_LON2.bin"
+   text	   data	    bss	    dec	    hex	filename
+  18292	    192	   2720	  21204	   52d4	BAI_TAP_LON2.elf
+Finished building: default.size.stdout
+ 
+Finished building: BAI_TAP_LON2.bin
+Finished building: BAI_TAP_LON2.hex
+ 
+ 
+Finished building: BAI_TAP_LON2.list
+ 
+15:03:09 **** Incremental Build of configuration Debug for project BAI_TAP_LON2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/fsm_automatic.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm_automatic.d" -MT"Core/Src/fsm_automatic.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm_automatic.o"
+arm-none-eabi-gcc -o "BAI_TAP_LON2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Hong Phat\Desktop\vlx btl\BAI_TAP_LON2\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BAI_TAP_LON2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BAI_TAP_LON2.elf
+ 
+arm-none-eabi-size   BAI_TAP_LON2.elf 
+arm-none-eabi-objdump -h -S  BAI_TAP_LON2.elf  > "BAI_TAP_LON2.list"
+arm-none-eabi-objcopy  -O ihex  BAI_TAP_LON2.elf  "BAI_TAP_LON2.hex"
+arm-none-eabi-objcopy  -O binary  BAI_TAP_LON2.elf  "BAI_TAP_LON2.bin"
+   text	   data	    bss	    dec	    hex	filename
+  18292	    192	   2720	  21204	   52d4	BAI_TAP_LON2.elf
+Finished building: default.size.stdout
+ 
+Finished building: BAI_TAP_LON2.hex
+Finished building: BAI_TAP_LON2.bin
+ 
+ 
+Finished building: BAI_TAP_LON2.list
+ 
+15:03:45 **** Incremental Build of configuration Debug for project BAI_TAP_LON2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/fsm_automatic.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm_automatic.d" -MT"Core/Src/fsm_automatic.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm_automatic.o"
+arm-none-eabi-gcc -o "BAI_TAP_LON2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Hong Phat\Desktop\vlx btl\BAI_TAP_LON2\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BAI_TAP_LON2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BAI_TAP_LON2.elf
+ 
+arm-none-eabi-size   BAI_TAP_LON2.elf 
+arm-none-eabi-objdump -h -S  BAI_TAP_LON2.elf  > "BAI_TAP_LON2.list"
+arm-none-eabi-objcopy  -O ihex  BAI_TAP_LON2.elf  "BAI_TAP_LON2.hex"
+arm-none-eabi-objcopy  -O binary  BAI_TAP_LON2.elf  "BAI_TAP_LON2.bin"
+   text	   data	    bss	    dec	    hex	filename
+  18292	    192	   2720	  21204	   52d4	BAI_TAP_LON2.elf
+Finished building: default.size.stdout
+ 
+Finished building: BAI_TAP_LON2.bin
+Finished building: BAI_TAP_LON2.hex
+ 
+ 
+Finished building: BAI_TAP_LON2.list
+ 
+15:14:25 **** Incremental Build of configuration Debug for project BAI_TAP_LON2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/fsm_automatic.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm_automatic.d" -MT"Core/Src/fsm_automatic.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm_automatic.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BAI_TAP_LON2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Hong Phat\Desktop\vlx btl\BAI_TAP_LON2\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BAI_TAP_LON2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BAI_TAP_LON2.elf
+ 
+arm-none-eabi-size   BAI_TAP_LON2.elf 
+arm-none-eabi-objdump -h -S  BAI_TAP_LON2.elf  > "BAI_TAP_LON2.list"
+arm-none-eabi-objcopy  -O ihex  BAI_TAP_LON2.elf  "BAI_TAP_LON2.hex"
+arm-none-eabi-objcopy  -O binary  BAI_TAP_LON2.elf  "BAI_TAP_LON2.bin"
+   text	   data	    bss	    dec	    hex	filename
+  18292	    192	   2720	  21204	   52d4	BAI_TAP_LON2.elf
+Finished building: default.size.stdout
+ 
+Finished building: BAI_TAP_LON2.hex
+Finished building: BAI_TAP_LON2.bin
+ 
+ 
+Finished building: BAI_TAP_LON2.list
+ 
+15:15:45 **** Incremental Build of configuration Debug for project BAI_TAP_LON2 ****
+make -j8 all 
+arm-none-eabi-size   BAI_TAP_LON2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18292	    192	   2720	  21204	   52d4	BAI_TAP_LON2.elf
+Finished building: default.size.stdout
+ 
+15:16:38 **** Incremental Build of configuration Debug for project BAI_TAP_LON2 ****
+make -j8 all 
+arm-none-eabi-size   BAI_TAP_LON2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18292	    192	   2720	  21204	   52d4	BAI_TAP_LON2.elf
+Finished building: default.size.stdout
+ 
+15:20:42 **** Incremental Build of configuration Debug for project BAI_TAP_LON2 ****
+make -j8 all 
+arm-none-eabi-size   BAI_TAP_LON2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18292	    192	   2720	  21204	   52d4	BAI_TAP_LON2.elf
+Finished building: default.size.stdout
  
